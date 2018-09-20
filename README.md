@@ -2,6 +2,8 @@
 세션관리란 현재 접속한 회원에게 할당해 주는 고유의 id. 세션으로 현재 로그인한 회원들을 구분한다.<br>
 <br>
 ![1](https://user-images.githubusercontent.com/41488792/45809012-23064d80-bd02-11e8-8424-6ba9c9344c06.PNG)
+![2](https://user-images.githubusercontent.com/41488792/45809399-04548680-bd03-11e8-960f-b9c0ce0a196e.PNG)
+
 
 # loginAction.jsp
 ```jsp

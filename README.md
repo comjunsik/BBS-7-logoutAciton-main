@@ -58,3 +58,25 @@ UserDAO userDAO = new UserDAO();
 </body>
 </html>
 ```
+**session.invalidate();** logout시 자동적으로 session 빼앗기게 구성<br>
+**location.href = 'main.jsp';** 그 후에 link로 main.jsp로 이동하게 한다.<br>
+
+# loginAction.jsp
+현재 로그인된 사용자(세션이 부여된 사용자)는 회원가입과 로그인 페이지에 들어가지 못하도록 막아야 한다.
+```jsp
+String userID= null;
+	if (session.getAttribute("userID") != null) {
+		userID = (String) session.getAttribute("userID");
+	}
+	if(userID != null) {
+		PrintWriter script = response.getWriter();
+		script.println("<script>");
+		script.println("alert('이미 로그인되었습니다.')");
+		script.println("location.href = 'main.jsp'");
+		script.println("</script>");
+	}
+```
+**if (session.getAttribute("userID") != null)** 만약 session이 존재한다면,<br>
+userID = (String) session.getAttribute("userID"); String으로 userID 저장<br>
+**if(userID != null) {** userID(session)가 존재하면 경고창과 함께 자동으로 main.jsp로 이동하여 로그인 못하게 막기<br>
+joinAction.jsp에도 동일한 코드를 상단에 집어넣어 회원가입도 막아주기.<br>

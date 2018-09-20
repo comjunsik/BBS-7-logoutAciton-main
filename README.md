@@ -1,6 +1,6 @@
 # 회원세션 관리
 세션관리란 현재 접속한 회원에게 할당해 주는 고유의 id. 세션으로 현재 로그인한 회원들을 구분한다.<br>
-<img scr="![1](https://user-images.githubusercontent.com/41488792/45808350-9313d400-bd00-11e8-83b7-6cb1017bfe68.JPG)">
+<img scr="https://github.com/comjunsik/BBS-7-logoutAciton-main/issues/1#issue-362090498">
 # loginAction.jsp
 ```jsp
 if (result == 1){

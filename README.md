@@ -227,6 +227,24 @@ joinAction.jsp에도 동일한 코드를 상단에 집어넣어 회원가입도 
             </ul>    
          </li>
        </ul>
+	<%
+		} else {
+	%>
+		<ul class="nav navbar-nav navbar-right">
+         <li class="dropdown">
+           <a href="#" class="dropdown-toggle" 
+            data-toggle="dropdown" role="button" aria-haspopup="true" 
+            aria-expanded="false">회원관리 <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+              <li><a href="logoutAction.jsp">로그아웃</a></li>
+              
+            </ul>    
+         </li>
+       </ul>
+	<% 
+		}
+	%>
 ```
-**if(userID==null) {... }** 안에 로그인, 회원가입 네비게이션 항목을 넣어 줌으로써, 로그인 하지 않았을때만 표시되게 수정<
+**if(userID==null) {... }** 안에 로그인, 회원가입 네비게이션 항목을 넣어 줌으로써, 로그인 하지 않았을때만 표시되게 수정<br>
+**else{...}** 로 로그인이 되어있지 않은 상태에서는 회원관리, 로그아웃 네비게이션바 
 

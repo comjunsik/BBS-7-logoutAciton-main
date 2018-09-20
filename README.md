@@ -3,7 +3,9 @@
 <br>
 ![1](https://user-images.githubusercontent.com/41488792/45809012-23064d80-bd02-11e8-8424-6ba9c9344c06.PNG)
 ![2](https://user-images.githubusercontent.com/41488792/45809399-04548680-bd03-11e8-960f-b9c0ce0a196e.PNG)
-
+![3](https://user-images.githubusercontent.com/41488792/45809449-251cdc00-bd03-11e8-9465-82b46de3877b.PNG)
+<br>
+[출처:http://hyeonstorage.tistory.com/125]
 
 # loginAction.jsp
 ```jsp
@@ -38,7 +40,7 @@ UserDAO userDAO = new UserDAO();
 	}
 	}
 ```
-**session.setAttribute("userID",user.getUserID());** 세션을 부여한 후 main.jsp로 이동
+회원 가입 시 **session.setAttribute("userID",user.getUserID());** 세션을 부여한 후 main.jsp로 이동
 
 # logoutAction.jsp
 ```jsp
@@ -62,7 +64,7 @@ UserDAO userDAO = new UserDAO();
 </body>
 </html>
 ```
-**session.invalidate();** logout시 자동적으로 session 빼앗기게 구성<br>
+**session.invalidate();** logout시 자동적으로 session 빼앗기게 구성 invalidate() 세션 무효화 <br>
 **location.href = 'main.jsp';** 그 후에 link로 main.jsp로 이동하게 한다.<br>
 
 # loginAction.jsp

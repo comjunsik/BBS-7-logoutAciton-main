@@ -81,6 +81,7 @@ userID = (String) session.getAttribute("userID"); String으로 userID 저장<br>
 **if(userID != null) {** userID(session)가 존재하면 경고창과 함께 자동으로 main.jsp로 이동하여 로그인 못하게 막기<br>
 joinAction.jsp에도 동일한 코드를 상단에 집어넣어 회원가입도 막아주기.<br>
 
+***
 # main.jsp
 ```jsp
 <%@ page language="java" contentType="text/html; charset=UTF-8"

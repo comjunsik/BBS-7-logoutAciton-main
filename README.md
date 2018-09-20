@@ -193,3 +193,40 @@ joinAction.jsp에도 동일한 코드를 상단에 집어넣어 회원가입도 
 </body>
 </html>
 ```
+**page import="java.io.PrintWriter"** 스크립트 문장을 수행하기 위해 import 해주기<br>
+```jsp
+<%
+		String userID = null;
+	if (session.getAttribute("userID") != null) {
+		userID = (String) session.getAttribute("userID");
+	}
+	%>
+```
+사용자의 id를 String으로 변환하여 저장<br>
+
+```jsp
+<ul class="nav navbar-nav">
+		<li class="active"><a href ="main.jsp">Main</a></li>
+		<li><a href="bbs.jsp">게시판</a></li>
+	</ul>
+```
+네비게이션 바에서 Main이라고 되어 있는 항목을 현재 들어가 있는 페이지라고 표시해주기 위해 class="active" 넣어줌.<br>
+
+```jsp
+<%
+		if(userID == null){
+	%>
+		<ul class="nav navbar-nav navbar-right">
+         <li class="dropdown">
+           <a href="#" class="dropdown-toggle" 
+            data-toggle="dropdown" role="button" aria-haspopup="true" 
+            aria-expanded="false">접속하기 <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+              <li><a href="login.jsp">로그인</a></li>
+              <li><a href="join.jsp">회원가입</a></li>
+            </ul>    
+         </li>
+       </ul>
+```
+**if(userID==null) {... }** 안에 로그인, 회원가입 네비게이션 항목을 넣어 줌으로써, 로그인 하지 않았을때만 표시되게 수정<
+
